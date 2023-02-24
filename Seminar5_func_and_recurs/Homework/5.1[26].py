@@ -9,20 +9,21 @@
 <function_name>(2,4) -> 16
 """
 
-def funcExponentiation(a: int, b: int, c: int) -> int:
+def funcExponentiation(a: int, b: int) -> int:
+    c = a
     if b != 2:
         b = b - 1
-        c = funcExponentiation(a, b, c)
+        c = funcExponentiation(a, b)
     c = c*a
     return c
 
 numA = int(input('Input A: '))
 numB = int(input('Input B: '))
-numC = numA
+
 if numB == 0:
     print(f'Result = 1')
 elif numB == 1:
     print(f'Result = {numA}')
 else:
-    rslt = funcExponentiation(numA, numB, numC)
+    rslt = funcExponentiation(numA, numB)
     print(f'Result = {rslt}')
