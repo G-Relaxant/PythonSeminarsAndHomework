@@ -25,9 +25,11 @@ lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 def exrsFunc(a: list, b: int, c: int) -> list:
     lstF = []
     for idx in range (len(a)):
-        # print(a[idx]) #test
+        # lstF = [tupF = (idx, a[idx]) for idx in range(len(a)) if a[idx] >= b and a[idx] <= c] # Comprehension, объекты не инициализируются почемуто, вроде должно работать
         if a[idx] >= b and a[idx] <= c:
-            lstF.append(idx)
+            tupF = (idx, a[idx])
+            lstF.append(tupF)
+            # lstF.append(idx)
     return lstF
 
 lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
