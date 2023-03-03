@@ -1,6 +1,6 @@
 from pathlib import Path            #\
 MAIN_DIR = Path(__file__).parent    # | задаём главную(корневую) папку для пути обращения(поиска) к файлу
-
+print()
 # fileRead = open('data2.txt', mode = 'r', encoding = 'utf-8')      # OPEN-CLOSE как правило не используется или используется в особенных случаях,
 # for line in fileRead:                                             # вместо o-c используют блок WITH OPEN(str25), так как o-c блокирует файл до момента
 #     print(line.strip().split('#'))                                # команды close, которая может не сработать из-за ошибки программы, а w-o разблокирует
