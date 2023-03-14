@@ -19,6 +19,7 @@ print(d)
 
 text = 'a a a b c a a d c d d'
 text = text.split()
+print(text)
 result = ''
 
 d = {}
