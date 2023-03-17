@@ -8,7 +8,12 @@ def batch_create(data: list, batch_data) -> list:
     return data
 
 def print_phone_book(data: list) -> None:
-    print(f'Kontakti: {data}')
+    #print(f'Kontakti: {data}')
+    for el in data:
+        print_record(el)
+    
+def print_record(record: list) -> None:
+    print(f'{record[0]}, {record[1]}, {record[2]}, {record[3]}')
 
 def get_data() -> list:
     print()
