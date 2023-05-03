@@ -25,7 +25,7 @@ def menu(data: list):
         elif get == '3':
             m.print_phone_book(data)
         elif get == '4':
-            m.read(data)
+            m.select_contact(data)
         elif get == '5':
             m.update(data)
         elif get == '6':

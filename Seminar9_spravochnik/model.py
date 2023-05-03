@@ -1,3 +1,5 @@
+import datetime
+
 def create(data: list, el: list) -> list:
     data.append(el)
     return data
@@ -14,6 +16,8 @@ def print_phone_book(data: list) -> None:
     
 def print_record(record: list) -> None:
     print(f'{record[0]}, {record[1]}, {record[2]}, {record[3]}')
+    print(f'{record[4]}, {record[5]}')
+    print()
 
 def get_data() -> list:
     print()
@@ -21,7 +25,9 @@ def get_data() -> list:
     name = input('Vvedite imya: ')
     phone = input('Vvedite nomer telefona: ')
     discription = input('Vvedite opisanie: ')
-    return [surname, name, phone, discription]
+    date_time = datetime.datetime.today().strftime("Data sozdaniya: %d-%m-%y Vremya: %H.%M.%S")
+    dtc = "Ne izmenyalos"
+    return [surname, name, phone, discription, date_time, dtc]
 
 def read(data: list) -> list:
     part_surname = input('Vvedite pervie bukvi familii: ')
@@ -58,6 +64,7 @@ def update(data: list) -> list:
                 else:
                     print('Nekorrektniy vvod')
                 el = change_contact
+        change_contact[5] = datetime.datetime.today().strftime("Data izmeneniya: %d-%m-%y Vremya: %H.%M.%S")
         return data
 
 def delete(data: list) -> list:
@@ -68,3 +75,7 @@ def delete(data: list) -> list:
             data.remove(el)
             break
     return data
+
+def select_contact(data: list) -> None:
+    change_contact = read(data)
+    print(f'Vi vibrali: {change_contact}')
