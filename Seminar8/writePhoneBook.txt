@@ -1,0 +1,4 @@
+id: 1, ('Connor', 'John', '364528842', 'PrimaryTarget')
+id: 2, ('Potter', 'Garry', '79843474873958626253682', 'Hogwards')
+id: 3, ('Vorobey', 'Jack', '---', 'PirateOfCaribean')
+id: 4, ('Luchshe', 'NeZvoni', '88005553535', 'ProshePozvonitChemUKogotoZanimat')
